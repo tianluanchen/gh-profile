@@ -1,0 +1,43 @@
+name: Deploy Instance
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Node
+      uses: actions/setup-node@v3
+      with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+          
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Build 
+      run: |
+        npm run build
+    
+    - name: Push Deta
+      env:
+        DETA_TOKEN: ${{ secrets.DETA_TOKEN }}
+        DETA_PROJECT_ID: ${{ secrets.DETA_PROJECT_ID }}
+      working-directory: "server"
+      run: | 
+        curl -fsSL https://deta.space/assets/space-cli.sh | sh 
+        export PATH="${HOME}/.detaspace/bin:$PATH"
+        echo "${DETA_TOKEN}" | space login -t
+        space link -i "${DETA_PROJECT_ID}" >/dev/null 2>&1
+        space push >/dev/null 2>&1

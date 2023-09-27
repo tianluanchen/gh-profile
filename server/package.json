@@ -1,0 +1,14 @@
+{
+    "name": "gh-profile-server",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "node ./index.js"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.12",
+        "express": "^4.18.2",
+        "node-fetch": "^3.3.1"
+    }
+}

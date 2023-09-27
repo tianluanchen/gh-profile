@@ -1,0 +1,8 @@
+v: 0
+micros:
+  - name: genreadme
+    src: ./
+    engine: nodejs16
+    primary: true
+    public: true
+    run: "node ./index.js"
