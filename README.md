@@ -11,8 +11,6 @@ The statistics graph is based on [GitHub Readme Stats](https://github.com/anurag
 
 English | [中文](./README.zh-CN.md)
 
-[Online Demo](https://genreadme-1-q7545292.deta.app/)
-
 ## Tech Stack
 
 Typescript + Vue3 + Vue-Router + [Pinia](https://pinia.vuejs.org/) + [Vue-i18n](https://github.com/intlify/vue-i18n-next) + [Naive UI](https://github.com/tusen-ai/naive-ui) + [Vite](https://vitejs.dev/)

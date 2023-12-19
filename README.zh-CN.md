@@ -11,8 +11,6 @@
 
 [English](./README.md) | 中文
 
-[在线实例](https://genreadme-1-q7545292.deta.app/)
-
 ## 技术栈
 
 Typescript + Vue3 + Vue-Router + [Pinia](https://pinia.vuejs.org/) + [Vue-i18n](https://github.com/intlify/vue-i18n-next) + [Naive UI](https://github.com/tusen-ai/naive-ui) + [Vite](https://vitejs.dev/)
