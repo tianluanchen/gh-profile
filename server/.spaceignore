@@ -1,0 +1,11 @@
+# 默认忽略
+
+# https://deta.space/docs/en/build/fundamentals/the-space-runtime#default-ignore-patterns
+
+# 否定模式
+
+# https://deta.space/docs/en/build/fundamentals/the-space-runtime#negating-a-pattern
+
+!dist
+!assets
+!build
